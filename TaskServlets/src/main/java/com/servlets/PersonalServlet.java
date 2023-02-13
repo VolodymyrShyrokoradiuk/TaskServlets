@@ -28,18 +28,14 @@ public class PersonalServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
 		response.setContentType("text/html");
         PrintWriter printWriter = response.getWriter();
         
         String text = request.getParameter("text");
-        try
-        {
+        try {
         	printWriter.println("<h1>Text: " + text + "</h1>");
         }
-        finally
-        {
+        finally {
         	printWriter.close();
         }
 	}
@@ -48,21 +44,17 @@ public class PersonalServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
 		response.setContentType("text/html");
         PrintWriter printWriter = response.getWriter();
         
         String name = request.getParameter("username");
         String pass = request.getParameter("userpass");
         
-        try
-        {
+        try {
         	printWriter.println("<p>Name: " + name + "</p>");
         	printWriter.println("<p>Password: " + pass + "</p>");
         }
-        finally
-        {
+        finally {
         	printWriter.close();
         }
 	}
@@ -72,13 +64,31 @@ public class PersonalServlet extends HttpServlet {
 	 */
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		response.setContentType("text/html");
+        PrintWriter printWriter = response.getWriter();        
+        
+        try {
+        	printWriter.println("PUT method");
+        }
+        finally {
+        	printWriter.close();
+        }
 	}
 
 	/**
 	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		response.setContentType("text/html");
+        PrintWriter printWriter = response.getWriter();        
+        
+        try {
+        	printWriter.println("DELETE method");
+        }
+        finally {
+        	printWriter.close();
+        }
 	}
 
 }
